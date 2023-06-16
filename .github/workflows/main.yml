@@ -7,10 +7,10 @@ on:
 
 env:
   MY_AWS_REGION: 'ap-northeast-1'
-  AWS_ROLENAME: 'role_githubactions_s3sync'
-  AWS_S3_BUCKET: 'bucket-name'
+  AWS_ROLENAME: 'GithubActions_S3_Role'
+  AWS_S3_BUCKET: 'chatgptlogs.azunyan.io'
   SOURCE_DIR: '.'
-  DEST_DIR: 'dir'
+  DEST_DIR: '.'
 
 jobs:
   deploy:
