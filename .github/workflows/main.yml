@@ -1,18 +1,31 @@
-name: Build React on S3
+name: Upload files to S3
+
 on:
   push:
-      branches:
-        - main
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@main  # リポジトリをチェックアウト
+    branches:
+    - main
 
-      - name: Deploy  # S3にデプロイ 
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: |
-          aws s3 cp --recursive --region ap-northeast-1 build s3://chatgptlogs.azunyan.io
+env:
+  MY_AWS_REGION: 'ap-northeast-1'
+  AWS_ROLENAME: 'role_githubactions_s3sync'
+  AWS_S3_BUCKET: 'bucket-name'
+  SOURCE_DIR: '.'
+  DEST_DIR: 'dir'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Configure AWS credentials with IAM Role
+      uses: aws-actions/configure-aws-credentials@main
+      with:
+        role-to-assume: arn:aws:iam::${{secrets.AWS_ACCOUNT_ID}}:role/${{env.AWS_ROLENAME}}
+        aws-region: ${{env.MY_AWS_REGION}}
+    - name: Copy files to S3
+      run: |
+          aws s3 sync ${{env.SOURCE_DIR}} s3://${{env.AWS_S3_BUCKET}}/${{env.DEST_DIR}}/ --exclude '.*git*'
