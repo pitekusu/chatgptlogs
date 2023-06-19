@@ -65,6 +65,7 @@
     <script>
         $(function() {
           $("#grid-basic").bootgrid({
+            ajax: true,
             labels: {
                 noResults: "検索結果 0件",
                 infos: "全 {{ctx.total}}件中 / {{ctx.start}}～{{ctx.end}}まで表示"
