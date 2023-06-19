@@ -1,0 +1,23 @@
+.pagination {
+    list-style: none;
+}
+
+.pagination li {
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #2C7CFF;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 0 0.5em;
+    cursor: pointer;
+}
+
+.pagination .count {
+    font-weight: normal;
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+#pagination_content{
+    text-align: center;
+}
