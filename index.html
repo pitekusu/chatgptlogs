@@ -63,9 +63,10 @@
             <table id="grid-basic" class="table table-condensed table-hover table-striped">
                 <thead>
                   <tr>
-                    <th data-column-id="id" data-type="numeric">ID</th>
-                    <th data-column-id="namae">名前</th>
-                    <th data-column-id="received" data-order="desc">メール</th>
+                    <th data-column-id="datetime" data-order="desc">日次</th>
+                    <th data-column-id="name">ユーザ名</th>
+                    <th data-column-id="usermessage">ユーザの質問</th>
+                    <th data-column-id="fubukimessage">ブッキーの回答</th>
                   </tr>
                 </thead>
                 <tbody id='chatgptlog'>
@@ -84,7 +85,7 @@
           
          } );
         });
-        </script>
+    </script>
 </body>
 
 </html>
