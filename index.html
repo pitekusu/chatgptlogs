@@ -3,50 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/pagination.css"> 
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <title>ChatGPTブッキー会話記録システム</title>
-    <script src="js/pagination.js"></script>
+    <meta name="description" content="ChatFBK-Logs（ブッキー会話ログシステム）">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+    <script src="js/pagination.js"></script> 
+    <title>ChatFBK-Logs（ブッキー会話ログシステム）</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse">
-        <div class="container">
-            <div class="navbar-header">
-                <p>ChatGPTブッキー会話記録システム</p>
-            </div>
-        </div>
-    </nav>
-    <div class="container">
-        <div class="card card-primary mb-3">
-            <div class="card-header">
-                <h5 class="card-title">ブッキー!!!!!!!!会話記録</h5>
-            </div>
-            <table class="table table-striped" th:if="${items.size()}">
-                <thead>
-                    <tr>
-                        <th style="width: 10%">日次</th>
-                        <th style="width: 10%">ユーザ名</th>
-                        <th style="width: 30%">ユーザの質問</th>
-                        <th style="width: 50%">ブッキーの答え</th>
-                    </tr>
-                </thead>
-                <tbody id='chatgptlog'>
-                </tbody>
-            </table>
-            <div id ="pagination_content">
-                <ul class="pagination">
-                    <li id="first">&nbsp;<<&nbsp;</li>
-                    <li id="prev">&nbsp;<&nbsp;</li>
-                    <li class="count"></li>
-                    <li id="next">&nbsp;>&nbsp;</li>
-                    <li id="last">&nbsp;>>&nbsp;</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+<h1>ChatFBK-Logs</h1>
+<p>Discord上で吹雪ちゃんと会話したログをWeb閲覧できるシステムです。</p>
+<table id="myTable" class="display responsive">
+    <thead>
+        <tr>
+            <th>日付</th>
+            <th>ユーザ名</th>
+            <th>質問内容</th>
+            <th>ブッキーの答え</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
 </body>
 
 </html>
