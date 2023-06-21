@@ -1,7 +1,7 @@
 // ISO 8601形式の日時を人間が読みやすい形式に変換する関数
 function formatDateTime(isoDateTime) {
     var date = new Date(isoDateTime);
-    var options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+    var options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'};
     return date.toLocaleString('ja-JP', options);
 }
 
