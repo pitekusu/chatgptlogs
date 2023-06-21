@@ -10,22 +10,43 @@ table {
 }
 
 
+
+html {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #c8dce0;
+    /* 背景色を指定してください */
+}
+
 body {
-    background-color: #f1f1f1;
-    background-image: linear-gradient(to bottom, #ffffff, #f1f1f1);
-    margin: 0 auto;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #c8dce0;
+    /* 背景色を指定してください */
 }
 
 .container {
     width: 100%;
+    max-width: 600px;
+    /* コンテナの最大幅を設定 */
     min-height: 100vh;
-    display: flex;
+    /* コンテナの最小高さを設定 */
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: #DDFFDD;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
     margin: 0 auto;
+    display: flex;
+    flex-grow: 1;
+    /* コンテンツが少ない場合でも余白を埋める */
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
