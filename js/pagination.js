@@ -22,6 +22,9 @@ $(document).ready(function() {
 
             // DataTableにデータをバインド
             $('#myTable').DataTable({
+                language: {
+                url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/ja.json',
+                },
                 data: items,
                 fixedHeader: true,
                 columns: [
