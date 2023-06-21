@@ -32,6 +32,7 @@ $(document).ready(function() {
                     { title: "質問内容", data: "usermessage", width: "20%"},
                     { title: "ブッキーの答え", data: "fubukimessage", width: "50%" }
                 ],
+                "deferRender": true,
                 responsive: true, // レスポンシブオプションを有効にする
                 order: [[0, "desc"]] // datetime列を昇順にソートする
             });
