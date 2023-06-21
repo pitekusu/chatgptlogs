@@ -24,10 +24,10 @@ $(document).ready(function() {
             $('#myTable').DataTable({
                 data: items,
                 columns: [
-                    { title: "日付", data: "datetime", width: "10%"},
-                    { title: "ユーザ名", data: "username", width: "15%"},
+                    { title: "日付", data: "datetime", width: "20%"},
+                    { title: "ユーザ名", data: "username", width: "10%"},
                     { title: "質問内容", data: "usermessage", width: "20%"},
-                    { title: "ブッキーの答え", data: "fubukimessage", width: "55%" }
+                    { title: "ブッキーの答え", data: "fubukimessage", width: "50%" }
                 ],
                 deferRender: true, // deferRender オプションを追加
                 responsive: true, // レスポンシブオプションを有効にする

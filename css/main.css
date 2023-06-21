@@ -4,13 +4,28 @@ table {
     font-family: 'Kiwi Maru', serif;
 }
 
-.container {
-    width: 80%;
-}
-
 .table td {
     word-wrap: break-word;
     word-break: break-all;
+}
+
+
+body {
+    background-color: #f1f1f1;
+    background-image: linear-gradient(to bottom, #ffffff, #f1f1f1);
+    margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
 }
 
 h1 {
