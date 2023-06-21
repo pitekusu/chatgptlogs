@@ -4,6 +4,10 @@ table {
     font-family: 'Kiwi Maru', serif;
 }
 
+.container {
+    width: 80%;
+}
+
 .table td {
     word-wrap: break-word;
     word-break: break-all;
