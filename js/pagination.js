@@ -23,6 +23,7 @@ $(document).ready(function() {
             // DataTableにデータをバインド
             $('#myTable').DataTable({
                 data: items,
+                fixedHeader: true,
                 columns: [
                     { title: "日付", data: "datetime", width: "20%"},
                     { title: "ユーザ名", data: "username", width: "10%"},
