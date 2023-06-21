@@ -23,16 +23,13 @@ $(document).ready(function() {
             // DataTableにデータをバインド
             $('#myTable').DataTable({
                 data: items,
-                language: {
-                    url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/ja.json',
-                },
                 columns: [
-                    { title: "日付", data: "datetime", width: "15%"},
+                    { title: "日付", data: "datetime", width: "10%"},
                     { title: "ユーザ名", data: "username", width: "15%"},
                     { title: "質問内容", data: "usermessage", width: "20%"},
-                    { title: "ブッキーの答え", data: "fubukimessage", width: "50%" }
+                    { title: "ブッキーの答え", data: "fubukimessage", width: "55%" }
                 ],
-                "deferRender": true,
+                deferRender: true, // deferRender オプションを追加
                 responsive: true, // レスポンシブオプションを有効にする
                 order: [[0, "desc"]] // datetime列を昇順にソートする
             });
