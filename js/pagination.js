@@ -24,13 +24,7 @@ $(document).ready(function() {
             $('#myTable').DataTable({
                 data: items,
                 language: {
-                    lengthMenu: '_MENU_ レコードずつ表示',
-                    zeroRecords: 'Nothing found - sorry',
-                    info: '_PAGES_ ページ中 _PAGE_ ページ目を表示中',
-                    infoEmpty: 'No records available',
-                    infoFiltered: '(filtered from _MAX_ total records)',
-                    search: 'Search',
-                    paginate: { first: 'First', last: 'Last', next: '次へ', previous: '前へ' }
+                    url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/ja.json',
                 },
                 columns: [
                     { title: "日付", data: "datetime", width: "15%"},
