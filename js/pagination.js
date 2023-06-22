@@ -1,11 +1,3 @@
-// ISO 8601形式の日時を人間が読みやすい形式に変換する関数
-function formatDateTime(isoDateTime) {
-    var date = new Date(isoDateTime);
-    var options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'};
-    return date.toLocaleString('ja-JP', options);
-}
-
-
 $(document).ready(function() {
     $.ajax({
         url: "https://v2st81ure8.execute-api.ap-northeast-1.amazonaws.com/default/chatgptlog",
@@ -15,11 +7,6 @@ $(document).ready(function() {
             // JSONデータの配列を取得
             var items = data.Items;
 
-    	// 日時を人間が読みやすい形式に変換する
-    	items.forEach(function(item) {
-       	 item.datetime = formatDateTime(item.datetime);
-    	});
-
             // DataTableにデータをバインド
             $('#myTable').DataTable({
                 language: {
@@ -27,6 +14,12 @@ $(document).ready(function() {
                 },
                 data: items,
                 fixedHeader: true,
+                columnDefs: [
+                    {
+                        targets: 0,
+                        render: DataTable.render.datetime('yyyy/MM/dd H:mm:ss'),
+                    },
+                ],
                 columns: [
                     { title: "日付", data: "datetime", width: "20%"},
                     { title: "ユーザ名", data: "username", width: "10%"},
