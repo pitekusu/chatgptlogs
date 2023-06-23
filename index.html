@@ -31,10 +31,26 @@
     <title>ChatFBK-Logs（ブッキー会話ログ閲覧システム）</title>
 </head>
 
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">システム構成図</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="./image/diagram.png" class="img-fluid" alt="システム構成図">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <body>
     <div class="container">
         <h1>ChatFBK-Logs</h1>
-        <p>吹雪ちゃんとDiscordで楽しく会話したログを閲覧できるシステムです。</p>
+        <p>吹雪ちゃんとDiscordで楽しく会話したログを閲覧できる<a href="#myModal" title="システム構成図" data-bs-toggle="modal">システム</a>です。</p>
         <table id="myTable" class="table table-borderless table-hover" style="width:100%">
             <thead class="table-warning">
                 <tr>
@@ -43,6 +59,5 @@
             <tbody></tbody>
         </table>
     </div>
-</body>
 
 </html>

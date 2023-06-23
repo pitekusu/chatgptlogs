@@ -37,3 +37,11 @@ $(document).ready(function() {
         }
     });
 });
+
+    $(document).ready(function () {
+        $('#myModal').on('shown.bs.modal', function () {
+            var modalImage = document.getElementById('modalImage');
+            modalImage.style.maxWidth = '100%';
+            modalImage.style.maxHeight = '100%';
+        });
+    });
