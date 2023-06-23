@@ -54,3 +54,29 @@ h1 {
     font-family: 'DotGothic16', sans-serif;
 }
 
+.modal-header {
+    border-radius: 5px 5px 0px 0px;
+    background-color: #333;
+    color: #eee;
+}
+
+a {
+    display: inline-block;
+    color: #555fff !important;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+a:hover {
+    font-weight: bold;
+    color: #555fff !important;
+    /*文字色*/
+    animation: zoom .3s;
+}
+
+@keyframes zoom {
+    50% {
+        transform: scale(1.1);
+    }
+}
